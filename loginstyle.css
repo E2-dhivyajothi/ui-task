@@ -6,7 +6,7 @@ html{
     
 }
 body {
-   background: url("image1.jpg");
+   background: url("./asserts/image1.jpg");
    height: 100%;
    width: 100%;
    margin: 0px;
@@ -19,7 +19,7 @@ body {
 }
 form{
     width: 30%;
-    height: 50%;
+    height: 46%;
     align-content: center;
     display: flex;
     justify-content: center;
@@ -90,7 +90,7 @@ form{
     cursor: pointer;
 }
  span{
-    height: 10%;
+    height: 7%;
     width: 50%;
     display: flex;
 	color:red;

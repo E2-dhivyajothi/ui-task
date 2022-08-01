@@ -4,23 +4,65 @@
     <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     </head>
-    <link rel="Stylesheet" type="text/css" href="css/loginstyle.css">
+    <link rel="Stylesheet" type="text/css" href="loginstyle.css">
     
     <body>                        
-            <form>
+            <form class ="full">
             <div class="login">
-                <div> <h1>LOGIN PAGE</h1> </div>
-                <label>Username</label>              
-                <input type="text"  placeholder="enter Username"  />
+                <div> <h1>LOGIN PAGE</h1> </div>    
+            <div class = "name">         
+                <label>Username</label>  
+                <input type="text" onblur="errorMessage()"placeholder="Enter  Username" id="username">
+               <span id="uerror"></span> </div>   
+            <div class = "pass">
+              
                 <label>Password</label>
-                <input type="password"  placeholder="enter Password" />
-                <button><a href="sidebar.html">Login</a></button>
+                <input type="password" onblur="errorMsg()"placeholder="Enter Password" id="userpass" > 
+             <span id="perror"></span></div>   
+                                    
+
+               <!--<button><a href="sidebar.html" target="_blank">Login</a></button>-->
+              <div><button type="button" onclick="errorMessage(), errorMsg()">LOGIN</button></div>
                <center>  <a href="https://www.google.com/" >Forget password?</a></center>
             
             </div>
         </form>
+        
+        
+        <script>
+        
+        function errorMessage() {
     
-    </body>
+        var username =document.getElementById('username').value;
+        var name = document.getElementById("uerror")
+        if ((document.getElementById("username").value==""))
+        {
+            name.textContent = "*Please enter usename"
+           
+        } else {
+             name.textContent = ""
+        }
+       
+    
+    }
+   
+    function errorMsg(){
+    
+        var upass = document.getElementById("perror")
+        if ((document.getElementById("userpass").value==""))
+        {
+            upass.textContent = "*Please enter password"
+          
+        }
+        else {
+            upass.textContent = ""
+        } 
+    
+    }
+
+
+
+</script>
 
 
 </html>
